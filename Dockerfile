@@ -11,6 +11,7 @@ WORKDIR /code
 COPY ./pyproject.toml /code/pyproject.toml
 COPY ./poetry.lock /code/poetry.lock
 RUN pip install --no-cache-dir --upgrade poetry
+RUN pip install poetry==1.7.1
 RUN pip install httpx
 RUN poetry config virtualenvs.create false
 RUN poetry install --no-dev --no-interaction --no-ansi
