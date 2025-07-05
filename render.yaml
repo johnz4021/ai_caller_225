@@ -2,7 +2,7 @@ services:
   - type: web
     name: personal-training-ai-caller
     runtime: python3
-    buildCommand: pip install -r requirements.txt
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
     startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
     plan: starter
     envVars:
@@ -10,6 +10,8 @@ services:
         value: 3.11.0
       - key: PORT
         value: 8000
+      - key: PIP_DISABLE_PIP_VERSION_CHECK
+        value: 1
     # Environment variables will be set in Render dashboard
     # Required: FIREBASE_SERVICE_ACCOUNT_JSON with full JSON credentials
     # Do not include sensitive data here 
