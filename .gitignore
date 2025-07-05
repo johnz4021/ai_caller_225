@@ -151,3 +151,5 @@ config.json
 # Others
 .DS_Store
 Thumbs.db
+
+serviceAccountKey.json

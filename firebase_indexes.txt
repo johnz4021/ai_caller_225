@@ -1,0 +1,48 @@
+Firebase Indexes Required for Session System
+============================================
+
+The following composite indexes need to be created in your Firebase Console:
+
+1. Sessions Collection - Client Sessions Query
+   Collection: sessions
+   Fields:
+   - clientId (Ascending)
+   - dateTime (Descending)
+   - __name__ (Ascending)
+
+2. Sessions Collection - Upcoming Sessions Query
+   Collection: sessions
+   Fields:
+   - dateTime (Ascending)
+   - trainerId (Ascending)
+   - __name__ (Ascending)
+
+3. Sessions Collection - Reminders Query
+   Collection: sessions
+   Fields:
+   - autoReminderSent (Ascending)
+   - status (Ascending)
+   - dateTime (Ascending)
+   - __name__ (Ascending)
+
+4. Sessions Collection - Available Slots Query
+   Collection: sessions
+   Fields:
+   - trainerId (Ascending)
+   - dateTime (Ascending)
+   - status (Ascending)
+   - __name__ (Ascending)
+
+How to Create These Indexes:
+1. Go to Firebase Console: https://console.firebase.google.com/
+2. Select your project
+3. Go to Firestore Database
+4. Click on "Indexes" tab
+5. Click "Create Index"
+6. Add the fields as specified above
+7. Set the Query scope to "Collection"
+8. Click "Create"
+
+Alternative: The system will automatically suggest creating these indexes when you run queries that need them. You can click the links provided in the error messages to create them automatically.
+
+Note: Index creation can take several minutes to complete. 

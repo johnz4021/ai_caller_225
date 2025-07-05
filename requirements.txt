@@ -1,0 +1,29 @@
+# Firebase and Google Cloud
+firebase-admin==6.4.0
+google-cloud-firestore==2.13.1
+
+# Date and time handling
+python-dateutil==2.8.2
+pytz==2023.3
+
+# Web framework and server
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+
+# Environment variables
+python-dotenv==1.0.0
+
+# AI and telephony (Vocode)
+vocode==0.1.108
+
+# Audio processing and speech
+pydub==0.25.1
+
+# HTTP requests
+requests==2.31.0
+
+# Async support
+asyncio-mqtt==0.13.0
+
+# Additional utilities
+schedule==1.2.0 

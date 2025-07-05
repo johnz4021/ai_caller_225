@@ -13,6 +13,10 @@ vonage = "^3.5.1"
 pyngrok = "^6.0.0"
 python-dotenv = "^1.0.0"
 vocode = "0.1.111a3"
+firebase-admin = "^6.4.0"
+google-cloud-firestore = "^2.13.1"
+python-dateutil = "^2.8.2"
+pytz = "^2023.3"
 
 
 [build-system]
